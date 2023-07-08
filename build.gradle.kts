@@ -2,4 +2,34 @@
 plugins {
     id("com.android.application") version "8.1.0-beta01" apply false
     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+    id("com.diffplug.spotless") version "5.3.0"
+}
+
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath ("com.android.tools.build:gradle:8.0.2")
+        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.20")
+
+
+        classpath("org.jetbrains.kotlin:kotlin-serialization:1.8.21")
+
+    }
+
+}
+
+
+apply(plugin = "com.diffplug.spotless")
+spotless {
+    kotlin {
+        target("**/*.kt")
+        licenseHeaderFile(
+            rootProject.file("${project.rootDir}/spotless/LICENSE.txt"),
+            "^(package|object|import|interface)"
+        )
+    }
 }

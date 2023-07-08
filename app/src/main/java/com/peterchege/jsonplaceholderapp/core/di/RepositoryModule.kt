@@ -13,14 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.peterchege.jsonplaceholderapp.ui.theme
+package com.peterchege.jsonplaceholderapp.core.di
 
-import androidx.compose.ui.graphics.Color
+import com.peterchege.jsonplaceholderapp.data.PostRepository
+import com.peterchege.jsonplaceholderapp.data.PostRepositoryImpl
+import org.koin.dsl.module
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val repositoryModule = module{
+
+    single<PostRepository> {
+        PostRepositoryImpl(defaultDispatcherProvider = get(), api = get())
+    }
+}
