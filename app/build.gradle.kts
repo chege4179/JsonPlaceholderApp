@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.peterchege.jsonplaceholderapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.peterchege.jsonplaceholderapp"
@@ -105,6 +105,9 @@ dependencies {
 
     implementation("com.github.skydoves:sealedx-core:1.0.1")
     ksp("com.github.skydoves:sealedx-processor:1.0.1")
+
+    implementation("io.github.raamcosta.compose-destinations:core:1.9.50")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.9.50")
     //timber
     implementation("com.jakewharton.timber:timber:5.0.1")
 

@@ -15,7 +15,6 @@
  */
 package com.peterchege.jsonplaceholderapp.data
 
-import com.peterchege.jsonplaceholderapp.core.api.responses.AllPostsResponse
 import com.peterchege.jsonplaceholderapp.core.api.responses.Post
 import com.peterchege.jsonplaceholderapp.core.util.NetworkResult
 

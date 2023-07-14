@@ -15,7 +15,6 @@
  */
 package com.peterchege.jsonplaceholderapp.core.api
 
-import com.peterchege.jsonplaceholderapp.core.api.responses.AllPostsResponse
 import com.peterchege.jsonplaceholderapp.core.api.responses.Post
 import retrofit2.Response
 import retrofit2.http.GET
